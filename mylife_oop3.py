@@ -297,9 +297,9 @@ class Board:
                 game = False
 
             elif (self.GRANDPOLE == self.POLE):
-                msg = 'Generation %s reaches a stable form of life for %s creatures' % (
+                msg = 'Generation {} reaches a stable form of life for {} creatures'.format(
                     self.loop.get(), self.alive.get())
-                self.slab.config(text='GAME OVER %s' % msg)
+                self.slab.config(text='GAME OVER {}'.format(msg))
                 self.rbut['state'] = tk.DISABLED
                 self.tbut.config(state=tk.NORMAL, text='RESTART', command=self.restart)
                 game = False
